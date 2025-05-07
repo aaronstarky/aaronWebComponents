@@ -1,0 +1,19 @@
+.jiggly-char {
+    display: inline-block;
+    animation: jiggly 3s infinite;
+}
+
+@keyframes jiggly {
+    0% {
+        transform: translateY(0px);
+    }
+    5% {
+        transform: translateY(-3px);
+    }
+    10% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
