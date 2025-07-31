@@ -1,0 +1,48 @@
+.loading-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.loading-content {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.loading-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-sizing: border-box;
+  animation: borderZip 2s linear infinite;
+  z-index: 0;
+}
+
+@keyframes borderZip {
+  0% {
+    clip-path: inset(0 100% 100% 0);
+    border-color: dodgerblue;
+  }
+  25% {
+    clip-path: inset(0 0 100% 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  75% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(100% 100% 0 0);
+  }
+}

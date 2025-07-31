@@ -54,4 +54,4 @@ class JigglyTextComponentJS extends HTMLElement {
     }
 }
 
-customElements.define('jiggly-text', JigglyTextComponentJS);
+customElements.define('JigglyText', JigglyTextComponentJS);
